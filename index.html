@@ -1,54 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>FlaskApp Demo</title>
-  <style>
-    body { font-family: Arial; margin: 40px; }
-    input, textarea { display: block; margin: 10px 0; padding: 8px; width: 300px; }
-    button { padding: 10px; background: blue; color: white; border: none; }
-    .item { border: 1px solid #ccc; padding: 10px; margin-top: 10px; }
-  </style>
+  <title>Calendrier d'anniversaire</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<h1>Welcome to FlaskApp</h1>
+<h1>🎂 Calendrier des anniversaires</h1>
 
-<h3>Add Item</h3>
-<input id="title" placeholder="Item title">
-<textarea id="desc" placeholder="Description"></textarea>
-<button onclick="addItem()">Add</button>
+<form id="form">
+  <input type="text" id="name" placeholder="Nom" required>
+  <input type="date" id="date" required>
+  <button type="submit">Ajouter</button>
+</form>
 
-<h3>Items</h3>
-<div id="items"></div>
+<ul id="list"></ul>
 
-<script>
-let items = [];
-
-function addItem() {
-  let title = document.getElementById("title").value;
-  let desc = document.getElementById("desc").value;
-
-  let item = { title, desc };
-  items.push(item);
-
-  displayItems();
-}
-
-function displayItems() {
-  let container = document.getElementById("items");
-  container.innerHTML = "";
-
-  items.forEach((item, index) => {
-    container.innerHTML += `
-      <div class="item">
-        <strong>${item.title}</strong>
-        <p>${item.desc}</p>
-      </div>
-    `;
-  });
-}
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
+<head>
+  <meta charset="UTF-8">
+  <title>Mon Site</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+
+  <script src="script.js"></script>
+</body>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemple</title>
+  <link rel="stylesheet" href="style.css">
+</head>
